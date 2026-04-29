@@ -7,7 +7,7 @@ public class Line {
 
     public Line(int count, LineStrategy strategy) {
         this.points = strategy.generate(count);
-    }
+    }// count수만큼 가로줄 생성
 
     public int move(int index) {
         return points.get(index).move();

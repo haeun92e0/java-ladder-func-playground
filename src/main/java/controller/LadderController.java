@@ -8,12 +8,13 @@ import java.util.List;
 public class LadderController {
     public void run() {
         try {
-            Names names = new Names(InputView.readNames());
+            Names names = new Names(InputView.readNames()); //이름입력받기
             List<String> rewards = Arrays.asList(InputView.readRewards().split(","));
-            int height = InputView.readHeight();
+            //사다리결과입력받기
+            int height = InputView.readHeight();//높이 입력받기(line 개수)
 
-            Ladder ladder = new Ladder(names.size(), height, new RandomLineStrategy());
-            ResultView.printLadder(names, ladder, rewards);
+            Ladder ladder = new Ladder(names.size(), height, new RandomLineStrategy()); //사다리생성
+            ResultView.printLadder(names, ladder, rewards); //사다리 출력
 
             LadderGameResult gameResult = new LadderGameResult(names, rewards, ladder);
             processResultQuery(gameResult, names);
@@ -23,9 +24,10 @@ public class LadderController {
     }
 
     private void processResultQuery(LadderGameResult gameResult, Names names) {
+        //결과를 계속 물어보는 루프
         while (true) {
-            String target = InputView.readTarget();
-            ResultView.printGameResult(gameResult.getResult(target, names));
+            String target = InputView.readTarget(); //결과를 알고싶은 사용자 입력받기
+            ResultView.printGameResult(gameResult.getResult(target, names)); //결과 보여줌
         }
     }
 
