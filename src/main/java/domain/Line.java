@@ -10,7 +10,7 @@ public class Line {
     }// count수만큼 가로줄 생성
 
     public int move(int index) {
-        return points.get(index).move();
+        return points.get(index).positionAfterMoving();
     }
 
     public List<Point> getPoints() { return Collections.unmodifiableList(points); }
