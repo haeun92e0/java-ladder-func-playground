@@ -3,5 +3,5 @@ package domain;
 import java.util.List;
 
 public interface LineStrategy {
-    List<Point> generate(int count);
+    List<LadderStep> generate(int count);
 }

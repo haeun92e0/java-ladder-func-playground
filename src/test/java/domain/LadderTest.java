@@ -12,8 +12,8 @@ class LadderTest {
     void ladder_climb() {
         // 2x2 크기의 고정된 사다리 생성 전략
         LineStrategy fixStrategy = count -> Arrays.asList(
-                new Point(0, false, true),
-                new Point(1, true, false)
+                new LadderStep(0, false, true),
+                new LadderStep(1, true, false)
         );
 
         Ladder ladder = new Ladder(2, 2, fixStrategy);

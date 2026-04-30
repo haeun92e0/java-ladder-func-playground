@@ -3,7 +3,7 @@ package domain;
 import java.util.*;
 
 public class Line {
-    private final List<Point> points;
+    private final List<LadderStep> points;
 
     public Line(int count, LineStrategy strategy) {
         this.points = strategy.generate(count);
@@ -13,5 +13,5 @@ public class Line {
         return points.get(index).positionAfterMoving();
     }
 
-    public List<Point> getPoints() { return Collections.unmodifiableList(points); }
+    public List<LadderStep> getPoints() { return Collections.unmodifiableList(points); }
 }

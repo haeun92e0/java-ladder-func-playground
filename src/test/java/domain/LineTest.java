@@ -11,9 +11,9 @@ class LineTest {
     @DisplayName("한 줄에서 이동 로직이 정상 작동하는지 확인")
     void line_move() {
         Line line = new Line(3, count -> Arrays.asList(
-                new Point(0, false, true),
-                new Point(1, true, false),
-                new Point(2, false, false)
+                new LadderStep(0, false, true),
+                new LadderStep(1, true, false),
+                new LadderStep(2, false, false)
         ));
 
         assertThat(line.move(0)).isEqualTo(1);

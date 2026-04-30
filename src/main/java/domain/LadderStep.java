@@ -1,11 +1,11 @@
 package domain;
 
-public class Point {//현재 위치에서 왼쪽으로 갈지, 오른쪽으로 갈지, 그대로 갈지를 판단하는 역할
+public class LadderStep {
     private final int index;
     private final boolean left;
     private final boolean right;
 
-    public Point(int index, boolean left, boolean right) {
+    public LadderStep(int index, boolean left, boolean right) {
         this.index = index;
         this.left = left;
         this.right = right;
