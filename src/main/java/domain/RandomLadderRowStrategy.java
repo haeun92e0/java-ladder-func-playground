@@ -8,10 +8,10 @@ public class RandomLadderRowStrategy implements LadderRowStrategy {
     @Override
     public List<LadderStep> generate(int count) {
         List<Boolean> bridges = new ArrayList<>();
-        boolean lastBridge = false;
+        boolean previousBridgeExists = false;
         for (int i = 0; i < count - 1; i++) {
-            lastBridge = random.nextBoolean() && !lastBridge;
-            bridges.add(lastBridge);
+            previousBridgeExists = random.nextBoolean() && !previousBridgeExists;
+            bridges.add(previousBridgeExists);
         }
         return convertToPoints(bridges); //bridges > point로 변환
     }
