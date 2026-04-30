@@ -15,12 +15,11 @@ public class LadderGameResult {
         });
     }
 
-    public String getResult(String target, Names names) {
-        if (target.equalsIgnoreCase("all")) return all(); //all이면 전체 결과 출력
+    public String getResult(String target) {
         return resultMap.getOrDefault(new Name(target), "해당 사용자가 없습니다.");
     }
 
-    private String all() {
+    public String all() {
         return resultMap.entrySet().stream()
                 .map(e -> e.getKey().getName() + " : " + e.getValue())
                 .collect(Collectors.joining("\n"));

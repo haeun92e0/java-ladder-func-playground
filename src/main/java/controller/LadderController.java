@@ -26,8 +26,16 @@ public class LadderController {
         //결과를 계속 물어보는 루프
         while (true) {
             String target = InputView.readTarget(); //결과를 알고싶은 사용자 입력받기
-            ResultView.printGameResult(gameResult.getResult(target, names)); //결과 보여줌
+            String result = findResult(gameResult, target);
+            ResultView.printGameResult(gameResult.getResult(target)); //결과 보여줌
         }
+    }
+
+    private String findResult(LadderGameResult gameResult, String target){
+        if (target.equalsIgnoreCase("all")){
+            return gameResult.all();
+        }
+        return gameResult.getResult(target);
     }
 
     private void runWithExceptionHandling(Runnable runnable){
