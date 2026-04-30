@@ -14,7 +14,7 @@ public class ResultView {
         System.out.println();
     }
 
-    private static void printLine(Line line) {
+    private static void printLine(LadderRow line) {
         String body = line.getPoints().stream()
                 .limit(line.getPoints().size() - 1)
                 .map(p -> p.isRight() ? "|-----" : "|     ")

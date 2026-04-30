@@ -15,7 +15,7 @@ public class LadderController {
         List<String> rewards = Arrays.asList(InputView.readRewards().split(","));
         int height = InputView.readHeight();
 
-        Ladder ladder = new Ladder(names.size(), height, new RandomLineStrategy());
+        Ladder ladder = new Ladder(names.size(), height, new RandomLadderRowStrategy());
         ResultView.printLadder(names, ladder, rewards);
 
         LadderGameResult gameResult = new LadderGameResult(names, rewards, ladder);

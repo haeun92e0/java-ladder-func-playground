@@ -10,7 +10,7 @@ class LineTest {
     @Test
     @DisplayName("한 줄에서 이동 로직이 정상 작동하는지 확인")
     void line_move() {
-        Line line = new Line(3, count -> Arrays.asList(
+        LadderRow line = new LadderRow(3, count -> Arrays.asList(
                 new LadderStep(0, false, true),
                 new LadderStep(1, true, false),
                 new LadderStep(2, false, false)

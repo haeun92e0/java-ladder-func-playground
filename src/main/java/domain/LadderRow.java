@@ -2,10 +2,10 @@ package domain;
 
 import java.util.*;
 
-public class Line {
+public class LadderRow {
     private final List<LadderStep> points;
 
-    public Line(int count, LineStrategy strategy) {
+    public LadderRow(int count, LadderRowStrategy strategy) {
         this.points = strategy.generate(count);
     }// count수만큼 가로줄 생성
 

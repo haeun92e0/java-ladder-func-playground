@@ -11,7 +11,7 @@ class LadderTest {
     @DisplayName("사다리 전체를 타고 내려갔을 때의 최종 위치 확인")
     void ladder_climb() {
         // 2x2 크기의 고정된 사다리 생성 전략
-        LineStrategy fixStrategy = count -> Arrays.asList(
+        LadderRowStrategy fixStrategy = count -> Arrays.asList(
                 new LadderStep(0, false, true),
                 new LadderStep(1, true, false)
         );

@@ -2,7 +2,7 @@ package domain;
 
 import java.util.*;
 
-public class RandomLineStrategy implements LineStrategy {
+public class RandomLadderRowStrategy implements LadderRowStrategy {
     private final Random random = new Random();
 
     @Override

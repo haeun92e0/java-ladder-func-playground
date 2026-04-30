@@ -2,6 +2,6 @@ package domain;
 
 import java.util.List;
 
-public interface LineStrategy {
+public interface LadderRowStrategy {
     List<LadderStep> generate(int count);
 }
